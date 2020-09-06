@@ -1,0 +1,35 @@
+---
+layout: skeleton
+---
+<h2>{{ page.name }}</h2>
+{% if page.new == true %}<h3>(New!)</h3>{% endif %}
+
+<script>
+	let images = [];
+	let index = 0;
+	{% for image in page.images %}
+	images.push({{ image }});
+	{% endfor %}
+	function ni() {
+		if (images.length - index !== 1) {
+			document.getElementById('image').src = images[++index];
+			document.getElementById('index').innerText = `Image ${index + 1} of ${images.length}`;
+		}
+	}
+	function pi() {
+		if (index !== 0) {
+			document.getElementById('image').src = images[--index];
+			document.getElementById('index').innerText = `Image ${index + 1 } of ${images.length}`;
+		}
+	}
+	window.onload = () => {
+		document.getElementById('image').src = images[--index];
+		document.getElementById('index').innerText = `Image ${index + 1 } of ${images.length}`;
+	};
+</script>
+<img id="image" width="150px" height="150px"/><br>
+<p id="index"></p>
+<div class="row">
+	<button class="button six columns" onclick="pi()">Previous Image</button>
+	<button class="button six columns" onclick="ni()"Next Image</button>
+</div>
