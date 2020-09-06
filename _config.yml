@@ -1,1 +1,14 @@
 baseurl: crochet
+collections:
+  products:
+    output: true
+defaults:
+  - scope:
+    path: ""
+    type: "products"
+  values:
+    layout: "product"
+  - scope:
+    path: ""
+  values:
+    layout: "skeleton"
