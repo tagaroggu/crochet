@@ -6,5 +6,5 @@ layout: skeleton
 {% if page.new == true %}<h3>(New!)</h3>{% endif %}
 <p>{{ content }}</p>
 {% for image in page.images %}
-<img src="{{ image }}" alt="{{ page.name }}" width="500px" loading="lazy">
+<img src="{{ image }}" alt="{{ page.name }}" style="width:500px; max-width: 100vw;" loading="lazy">
 {% endfor %}
