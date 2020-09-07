@@ -3,3 +3,5 @@ layout: skeleton
 ---
 <a href="javascript:window.history.back()">&lt; Go Back</a>
 <h2>{{ page.name }}</h2>
+{% if page.new == true %}<h3>(New!)</h3>{% endif %}
+<p>{{ content }}</p>
