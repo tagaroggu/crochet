@@ -1,5 +1,10 @@
 ---
 layout: skeleton
 ---
-
+{% for product in site.products %}
+	<a href="{{ product.url }}">
+		<div class="row"></div>
+		<p>{{ product.name }}</p>
+	</a>
+{% endfor %}
 <p>You may also request a product not listed.</p>
