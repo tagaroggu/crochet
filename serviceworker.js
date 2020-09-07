@@ -7,7 +7,8 @@ self.addEventListener('install', (event) => {
 				'assets/css/normalize.css',
 				'assets/css/skeleton.css',
 				'https://fonts.googleapis.com/css2?family=Raleway&display=swap',
-				'offline.html'
+				'offline.html',
+				'404.html'
 			]);
 		});
 	);
