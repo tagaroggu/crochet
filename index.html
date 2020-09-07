@@ -5,7 +5,7 @@ layout: skeleton
 	<a href="{{ product.url | relative_url }}">
 		<div class="row">
 			{% for image in product.images %}
-				<img src="{{ image }}" width="150px" alt="{{ product.name }}">
+				<img src="{{ image }}" width="150px" alt="{{ product.name }}" loading="lazy">
 			{% endfor %}
 		</div>
 		<p>{{ product.name }}</p>
