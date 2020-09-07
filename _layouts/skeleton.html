@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
 	<head>
 		<title>{{ page.title | default: "Logan's Crochet" }}</title>
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 		<meta name="theme-color" content="#FFAAAA" />
+		<meta name="description" content="Crocheted products" />
+		
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="{{ page.title | default: "Logan's Crochet" }}" />
+		<meta name="twitter:description" content="Crocheted products" />
+		<meta name="twitter:image" content="https://tagaroggu.github.io/assets/images/Tagaroggu.png" />
+		<meta name="twitter:site" content="@Tagaroggu" />
+		
+		<meta name="og:title" content="{{ page.title | default: "Logan's Crochet" }}" />
+		<meta name="og:type" content="website" />
+		<meta name="og:image" content="https://tagaroggu.github.io/assets/images/Tagaroggu.png" />
+		<meta name="og:url" content="https://tagaroggu.github.io/crochet" />
+		<meta name="og:description" content="Crocheted products" />
 		
 		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="{{ "/assets/css/normalize.css" | relative_url }}">
