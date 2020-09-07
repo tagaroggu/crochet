@@ -3,13 +3,18 @@
 	<head>
 		<title>{{ page.title | default: "Logan's Crochet" }}</title>
 		
-		<meta name="viewport" content="width=device-width, initial=scale=1.0, minimum-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 		<meta name="theme-color" content="#FFAAAA" />
 		
 		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="{{ "/assets/css/normalize.css" | relative_url }}">
 		<link rel="stylesheet" href="{{ "/assets/css/skeleton.css" | relative_url}}">
 		<style>a {text-decoration: none}</style>
+		<script>
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register({{ "/serviceworker.js" | relative_url }});
+			}
+		</script>
 	</head>
 	<body class="container" style="font-family: 'Raleway', sans-serif; text-align: center">
 		<h1 style="margin-top: 5%"><a href="{{ "/" | relative_url }}">Logan's Crochet</a></h1>
