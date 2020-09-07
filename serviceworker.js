@@ -13,24 +13,15 @@ self.addEventListener('install', (event) => {
 		});
 	);
 });
-self.addEventListener('fetch', (event) => {event.waitUntil(
-	if (/\.(png|jpeg|jpg|gif)/.match(event.request.url)) {
-		return caches.open('images').then((cache) => {
-			return fetch(event.request).then((response) => {
-				cache.put(event.request, response.clone());
-				return response;
-			}).catch(() => {
-				return cache.match(event.request) || cache.match('offline.html');
-			})
-		});
-	} else {
-		return caches.open('static').then((cache) => {
-			return cache.match(event.request) || fetch(event.request).then((response) => {
-				cache.put(event.request, response.clone());
-				return response;
-			}).catch(() => {
-				return cache.match('offline.html');
+self.addEventListener("fetch", (event) => {
+	event.respondWith(
+		caches.open('static').then((cache) => {
+			return cache.match(event.request).then((response) => {
+				return response || fetch(event.request).then((response) => {
+					cache.put(event.request, response.clone());
+					return response;
+				});
 			});
-		});
-	}
-)});
+		})
+	);
+});
