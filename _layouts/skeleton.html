@@ -20,15 +20,14 @@
 		<meta name="og:description" content="Crocheted products" />
 		
 		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="/assets/css/normalize.css">
-		<link rel="stylesheet" href="/assets/css/skeleton.css">
+		<link rel="stylesheet" href="{{ "/assets/css/normalize.css" | relative_url }}">
+		<link rel="stylesheet" href="{{ "/assets/css/skeleton.css" | relative_url }}">
 		<style>a {text-decoration: none}</style>
 		<script>
 			if ('serviceWorker' in navigator) {
-				navigator.serviceWorker.register("/serviceworker.js");
+				navigator.serviceWorker.register("{{ "/serviceworker.js" | relative_url }}");
 			}
 		</script>
-		<base href="https://tagaroggu.github.io/crochet/">
 	</head>
 	<body class="container" style="font-family: 'Raleway', sans-serif; text-align: center">
 		<h1 style="margin-top: 5%"><a href="/">Logan's Crochet</a></h1>
