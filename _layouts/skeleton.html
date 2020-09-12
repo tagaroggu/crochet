@@ -20,17 +20,18 @@
 		<meta name="og:description" content="Crocheted products" />
 		
 		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="{{ "/assets/css/normalize.css" | relative_url }}">
-		<link rel="stylesheet" href="{{ "/assets/css/skeleton.css" | relative_url}}">
+		<link rel="stylesheet" href="/assets/css/normalize.css">
+		<link rel="stylesheet" href="/assets/css/skeleton.css">
 		<style>a {text-decoration: none}</style>
 		<script>
 			if ('serviceWorker' in navigator) {
-				navigator.serviceWorker.register({{ "/serviceworker.js" | relative_url }});
+				navigator.serviceWorker.register("/serviceworker.js");
 			}
 		</script>
+		<base href="https://tagaroggu.github.io/crochet/">
 	</head>
 	<body class="container" style="font-family: 'Raleway', sans-serif; text-align: center">
-		<h1 style="margin-top: 5%"><a href="{{ "/" | relative_url }}">Logan's Crochet</a></h1>
+		<h1 style="margin-top: 5%"><a href="/">Logan's Crochet</a></h1>
 		{{ content }}
 		<hr><footer>Contacts: <a href="mailto:taga@myself.com" alt="Email">taga@myself.com</a>, <a href="sms:16083152470">+1 (608) 315-2470</a>, <a href="https://t.me/Junipyr" alt="Telegram">@Junipyr on Telegram</a>.</footer>
 	</body>
