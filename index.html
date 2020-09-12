@@ -8,7 +8,7 @@ layout: skeleton
 				<img src="{{ image }}" width="150px" alt="{{ product.name }}" loading="lazy">
 			{% endfor %}
 		</div>
-		<p>{{ product.name }}</p>
+		<p>{{ product.name }}{% if product.new == "true" %} (New!){% endif %}</p>
 	</a>
 {% endfor %}
 <p>You may also request a product not listed.</p>
