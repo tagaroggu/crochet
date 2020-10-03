@@ -1,4 +1,37 @@
----
-layout: skeleton
----
-<h2>Page not found. <a href="javascript:window.history.back()">Go back</a>.</h2>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>404</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		
+		<link rel="stylesheet" href="/assets/css/normalize.css">
+		<link rel="stylesheet" href="/assets/css/skeleton.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap">
+		
+		<style>
+			a { text-decoration: none; } a:hover { text-decoration: underline; }
+			
+			@media (prefers-color-scheme: dark) {
+				body {
+					color: #eee;
+					background-color: #111;
+					text-align: center;
+				}
+			}
+			
+			body {
+				color: #111;
+				background-color: #eee;
+				text-align: center;
+			}
+		</style>
+		<script type="module">
+			import { html, render } from 'https://unpkg.com/lit-html?module';
+			import { layout } from '/assets/js/layout.js';
+			render(layout(html`<h2>Page not found. <a href="javascript:window.history.back()">Go back</a>.</h2>`), document.body);
+		</script>
+	</head>
+	<body style="container">
+	</body>
+</html>

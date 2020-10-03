@@ -1,4 +1,0 @@
-baseurl: crochet
-collections:
-  products:
-    output: true
