@@ -1,14 +1,33 @@
----
-layout: skeleton
----
-{% for product in site.products %}
-	<a href="{{ product.url | relative_url }}" style="content-visibility: auto">
-		<div class="row">
-			{% for image in product.images %}
-				<img src="{{ image }}" width="150px" alt="{{ product.name }}" loading="lazy">
-			{% endfor %}
-		</div>
-		<p>{{ product.name }}{% if product.new == "true" %} (New!){% endif %}</p>
-	</a>
-{% endfor %}
-<p>You may also request a product not listed.</p>
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Logan's Crochet</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+		
+		<link rel="stylesheet" href="/assets/css/normalize.css">
+		<link rel="stylesheet" href="/assets/css/skeleton.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap">
+		
+		<style>
+			a { text-decoration: none; } a:hover { text-decoration: underline; }
+			
+			@media (prefers-color-scheme: dark) {
+				body {
+					color: #eee;
+					background-color: #111;
+					text-align: center;
+				}
+			}
+			
+			body {
+				color: #111;
+				background-color: #eee;
+				text-align: center;
+			}
+		</style>
+		<script type="module" src="/assets/js/index.html.js"></script>
+	</head>
+	<body class="container">
+	</body>
+</html>
